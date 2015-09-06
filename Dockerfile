@@ -6,7 +6,7 @@ From ubuntu:latest
 MAINTAINER issei126
 
 RUN useradd -m -d /home/issei126 -s /bin/bash -g users issei126 
-RUN echo "issei126:issei126" | chpasswd \
+RUN echo "issei126:users" | chpasswd \
  && mkdir /home/issei126/.ssh \
  && chmod 700 /home/issei126/.ssh \
  && chown -R issei126:issei126 /home/issei126/.ssh
