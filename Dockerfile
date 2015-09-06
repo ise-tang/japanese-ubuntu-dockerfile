@@ -9,7 +9,7 @@ RUN useradd -m -d /home/issei126 -s /bin/bash -g users issei126
 RUN echo "issei126:users" | chpasswd \
  && mkdir /home/issei126/.ssh \
  && chmod 700 /home/issei126/.ssh \
- && chown -R issei126:issei126 /home/issei126/.ssh
+ && chown -R issei126:users /home/issei126/.ssh
 
 RUN echo "issei126 ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 RUN echo "Defaults        exempt_group=wheel" >> /etc/sudoers
